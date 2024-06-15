@@ -16,7 +16,7 @@ async function fetchModels(page, lora, locon) {
   try {
     const response = await axios.get("https://civitai.com/api/v1/models", {
       params: {
-        nsfw: true,
+        nsfw: false,
         sort: "Newest",
         types: lora ? "LORA" : "LoCon",
         limit: 100,
