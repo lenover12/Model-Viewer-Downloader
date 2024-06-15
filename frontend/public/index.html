@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MVD</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.5/jszip.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="/static/image/to_page.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <h1>Model Viewer Downloader</h1>
+        <label class="toggle-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    </header>
+    <main>
+        <div class="top_buttons">
+            <div class="radio-buttons">
+                <input type="radio" name="file-prefix" value="animal" id="animal">
+                <label for="animal">animal</label>
+                <input type="radio" name="file-prefix" value="body" id="body">
+                <label for="body">body
+                </label>
+                <input type="radio" name="file-prefix" value="clothes" id="clothes">
+                <label for="clothes">clothes</label>
+                <input type="radio" name="file-prefix" value="character" id="character">
+                <label for="character">character</label>
+                <input type="radio" name="file-prefix" value="emotion" id="emotion">
+                <label for="emotion">emotion</label>
+                <input type="radio" name="file-prefix" value="fantasy" id="fantasy">
+                <label for="fantasy">fantasy</label>
+                <input type="radio" name="file-prefix" value="location" id="location">
+                <label for="location">location</label>
+                <input type="radio" name="file-prefix" value="MC" id="MC">
+                <label for="MC">MC</label>
+                <input type="radio" name="file-prefix" value="pose" id="pose">
+                <label for="pose">pose</label>
+                <input type="radio" name="file-prefix" value="texture" id="texture">
+                <label for="texture">texture</label>
+                <input type="radio" name="file-prefix" value="thing" id="thing">
+                <label for="thing">thing</label>
+                <input type="radio" name="file-prefix" value="situation" id="situation">
+                <label for="situation">situation</label>
+                <input type="radio" name="file-prefix" value="style" id="style">
+                <label for="style">style</label>
+                <!-- <button id="clearSelectionButton">▬</button> -->
+            </div>
+            <div>
+            </div>
+        </div>
+
+        <div id="modelsContainer">
+            <!-- Models will be displayed here -->
+        </div>
+        <div class="pagination">
+            <span>Page <span id="currentPage">1</span></span>
+            <button id="nextPageButton">Next Page</button>
+        </div>
+    </main>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const radioButtons = document.querySelectorAll('input[name="file-prefix"]');
+
+            // toggle dark mode
+            const themeToggle = document.getElementById("theme-toggle");
+            const body = document.body;
+
+            themeToggle.addEventListener("change", () => {
+                if (themeToggle.checked) {
+                    body.classList.add("dark-mode");
+                } else {
+                    body.classList.remove("dark-mode");
+                }
+            });
+            const clearSelectionButton = document.getElementById('clearSelectionButton');
+
+            // Clear selection button click event to deselect all radio buttons
+            clearSelectionButton.addEventListener('click', () => {
+                radioButtons.forEach(radio => {
+                    radio.checked = false;
+                });
+            });
+
+        });
+    </script>
+</body>
+
+</html>
