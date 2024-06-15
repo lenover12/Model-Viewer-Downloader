@@ -67,17 +67,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return matchingEntries;
   }
-
+  
   const tagChecklist = [
     "2D",
     "3D",
     "animal",
     "animals",
-    "av actress",
-    "avactress",
     "background",
     "backgrounds",
-    "BDSM",
     "body",
     "building",
     "buildings",
@@ -103,10 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "games",
     "gay",
     "gravure",
-    "hentai",
     "horror",
     "influencer",
-    "jav",
     "kpop",
     "location",
     "locations",
@@ -118,7 +113,6 @@ document.addEventListener("DOMContentLoaded", () => {
     "pixels",
     "pixelart",
     "pixel art",
-    "pornstar",
     "pose",
     "realistic",
     "retro",
@@ -139,6 +133,15 @@ document.addEventListener("DOMContentLoaded", () => {
     "videogames",
     "voxel",
     "voxels",
+  ];
+
+  const tagChecklistNSFW = [
+    "av actress",
+    "avactress",
+    "BDSM",
+    "hentai",
+    "jav",
+    "pornstar",
   ];
 
   function appendModels(models) {
