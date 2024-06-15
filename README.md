@@ -1,4 +1,7 @@
-# Model Viewer Downloader
+<div style="display: flex; align-items: center;">
+  <img src="https://github.com/lenover12/model_viewer_downloader/blob/main/frontend/public/static/image/to_page.png" alt="Model Viewer Downloader Logo" style="width: 50px; height: 50px; margin-right: 10px;">
+  <h1 style="font-size: 2em; margin: 0;">Model Viewer Downloader</h1>
+</div>
 
 Welcome to **Model Viewer Downloader**! Unlike its similarly named sibling, Model View Controller (MVC), this web app isn't about controlling your models – it's about viewing and downloading them! 
 
